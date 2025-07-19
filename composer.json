@@ -1,0 +1,15 @@
+{
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "league/plates": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "MuseeVirtuel\\Models\\": "src/models/",
+            "MuseeVirtuel\\Core\\": "src/core/",
+            "MuseeVirtuel\\Controllers\\": "src/controllers/",
+            "MuseeVirtuel\\Config\\": "config/"
+        }
+    }
+
+}

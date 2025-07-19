@@ -1,0 +1,355 @@
+/* Exposition Detail Page Styles */
+:root {
+    --primary: #3a506b;
+    --primary-light: #5bc0be;
+    --secondary: #1c2541;
+    --accent: #e63946;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.exposition-detail {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.exposition-header {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.exposition-hero {
+    height: 60vh;
+    min-height: 500px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.exposition-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exposition-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+.exposition-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    position: relative;
+    display: inline-block;
+}
+
+.exposition-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary-light);
+}
+
+.exposition-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.exposition-meta i {
+    margin-right: 0.5rem;
+    color: var(--primary);
+}
+
+.exposition-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.exposition-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.exposition-artworks {
+    margin-top: 3rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-light);
+}
+
+.artworks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.artwork-thumbnail {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 300px;
+}
+
+.artwork-thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.artwork-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.artwork-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.artwork-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 1.5rem 1rem 1rem;
+    color: white;
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.artwork-thumbnail:hover .artwork-info-overlay {
+    transform: translateY(0);
+}
+
+.artwork-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.artwork-artist {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.exposition-info-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.info-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.info-card-title i {
+    color: var(--primary-light);
+}
+
+.info-item {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.info-item i {
+    color: var(--primary-light);
+    margin-top: 0.2rem;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--secondary);
+    min-width: 120px;
+}
+
+.info-value {
+    flex-grow: 1;
+}
+
+.exposition-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.virtual-tour-section {
+    background-color: var(--light);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.virtual-tour-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.virtual-tour-preview {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.virtual-tour-preview img {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.play-button i {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: white;
+}
+
+.related-expositions {
+    margin-top: 5rem;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.related-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.related-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.related-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.related-card:hover .related-image img {
+    transform: scale(1.05);
+}
+
+.related-info {
+    padding: 1.5rem;
+}
+
+.related-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+}
+
+.related-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.related-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .exposition-content {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .exposition-title {
+        font-size: 3.5rem;
+    }
+}
